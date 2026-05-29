@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sustainability &amp; Impact | Krishi Agri Benin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; vertical-align:middle; }
+        .reveal { opacity:0; transform:translateY(20px); transition:all 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.active { opacity:1; transform:translateY(0); }
+        .bento-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:24px; }
+        .hamburger { display:flex; flex-direction:column; justify-content:center; gap:5px; width:32px; height:32px; cursor:pointer; padding:2px; }
+        .hamburger span { display:block; height:2px; background:#173901; border-radius:2px; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); transform-origin:center; }
+        .hamburger span:nth-child(1) { width:100%; }
+        .hamburger span:nth-child(2) { width:75%; }
+        .hamburger span:nth-child(3) { width:100%; }
+        .hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); width:100%; }
+        .hamburger.is-open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); width:100%; }
+        #mobile-menu nav a { opacity:0; transform:translateX(20px); transition:opacity 0.3s ease,transform 0.3s ease,color 0.2s ease; }
+        #mobile-menu.is-open nav a { opacity:1; transform:translateX(0); }
+        #mobile-menu.is-open nav a:nth-child(1) { transition-delay:0.08s; }
+        #mobile-menu.is-open nav a:nth-child(2) { transition-delay:0.14s; }
+        #mobile-menu.is-open nav a:nth-child(3) { transition-delay:0.20s; }
+        #mobile-menu.is-open nav a:nth-child(4) { transition-delay:0.26s; }
+        #mobile-menu.is-open nav a:nth-child(5) { transition-delay:0.32s; }
+        #mobile-menu .mobile-cta { opacity:0; transform:translateY(10px); transition:opacity 0.3s ease 0.38s,transform 0.3s ease 0.38s; }
+        #mobile-menu.is-open .mobile-cta { opacity:1; transform:translateY(0); }
+    </style>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover how Krishi Agri Benin drives sustainable agriculture in West Africa — renewable energy, zero-waste processing, farmer training, and community empowerment at GDIZ.">
+    <meta name="keywords" content="sustainability Benin agribusiness, eco-friendly cotton processing, GDIZ green industry, farmer empowerment West Africa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krishiagribenin.rejustewenoumi.com/sustainability.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sustainability &amp; Impact | Krishi Agri Benin">
+    <meta property="og:description" content="Our commitment to ecological balance, community development, and responsible industrialization in Benin's agricultural sector.">
+    <meta property="og:url" content="https://krishiagribenin.rejustewenoumi.com/sustainability.html">
+    <meta property="og:site_name" content="Krishi Agri Benin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sustainability &amp; Impact | Krishi Agri Benin">
+    <meta name="twitter:description" content="Eco-friendly cotton processing and farmer empowerment in West Africa.">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f9faf7",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f0f1ee",
+                    "on-surface-variant": "#43493d",
+                    "surface-variant": "#e2e3e0",
+                    "outline": "#73796c",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-tint": "#43682b",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#0a2100",
+                    "on-surface": "#191c1b",
+                    "surface-container-highest": "#e2e3e0",
+                    "tertiary-fixed": "#e4e2e1",
+                    "inverse-surface": "#2e312f",
+                    "surface-dim": "#d9dad7",
+                    "surface-container-high": "#e7e8e6",
+                    "tertiary-container": "#474747",
+                    "secondary-fixed-dim": "#e9c349",
+                    "secondary-container": "#fed65b",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#2c4f15",
+                    "inverse-primary": "#a8d38a",
+                    "primary-fixed-dim": "#a8d38a",
+                    "on-tertiary-container": "#b7b5b5",
+                    "on-primary-container": "#98c27b",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#c4efa3",
+                    "on-secondary-container": "#745c00",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1b",
+                    "primary": "#173901",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-container": "#2d5016",
+                    "surface": "#f9faf7",
+                    "secondary": "#735c00",
+                    "surface-bright": "#f9faf7",
+                    "surface-container": "#edeeeb",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-container-low": "#f3f4f1",
+                    "tertiary": "#313131",
+                    "on-secondary-fixed-variant": "#574500",
+                    "outline-variant": "#c3c9b9",
+                    "secondary-fixed": "#ffe088"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-secondary h-20 transition-all duration-300">
+        <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-full w-full">
+            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary hover:opacity-90 transition-opacity">Krishi Agri Benin</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a id="nav-home" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="index.html">Home</a>
+                <a id="nav-about" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="about.html">About Us</a>
+                <a id="nav-products" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="products.html">Products &amp; Services</a>
+                <a id="nav-sustainability" class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="sustainability.html">Sustainability</a>
+                <a id="nav-contact" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="contact.html">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all">
+                    Partner With Us
+                </a>
+                <button id="menu-btn" class="hamburger md:hidden focus:outline-none" aria-label="Toggle Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Mobile Nav Drawer (Premium) -->
+    <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-[300px] max-w-[88vw] bg-white z-[100] shadow-2xl flex flex-col md:hidden translate-x-full transition-transform duration-350 ease-in-out" style="transition-timing-function: cubic-bezier(0.4,0,0.2,1);">
+        <!-- Drawer Header -->
+        <div class="flex justify-between items-center px-6 py-5 border-b-2 border-secondary bg-white">
+            <a href="index.html" class="font-bold text-primary text-lg tracking-tight">Krishi Agri Benin</a>
+            <button id="close-menu-btn" class="hamburger is-open focus:outline-none" aria-label="Close Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Nav Links -->
+        <nav class="flex flex-col px-6 pt-6 pb-4 flex-1 overflow-y-auto">
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="index.html">
+                <span class="material-symbols-outlined text-xl">home</span>Home
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="about.html">
+                <span class="material-symbols-outlined text-xl">info</span>About Us
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="products.html">
+                <span class="material-symbols-outlined text-xl">inventory_2</span>Products &amp; Services
+            </a>
+            <a class="flex items-center gap-3 text-primary font-bold text-lg py-3.5 border-b border-outline-variant/20 hover:text-secondary transition-colors" href="sustainability.html">
+                <span class="material-symbols-outlined text-xl">eco</span>Sustainability
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="contact.html">
+                <span class="material-symbols-outlined text-xl">mail</span>Contact
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 transition-colors" href="careers.html">
+                <span class="material-symbols-outlined text-xl">work</span>Careers
+            </a>
+        </nav>
+
+        <!-- Drawer Footer CTA -->
+        <div class="mobile-cta px-6 pb-8 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+            <a class="bg-primary text-on-primary text-center py-3.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all rounded-sm" href="contact.html">
+                Partner With Us
+            </a>
+            <div class="flex justify-center gap-6 pt-2">
+                <a href="mailto:contact@krishiagribenin.com" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">mail</span> Email
+                </a>
+                <a href="tel:+22900000000" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">call</span> Call
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-15 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A wide panoramic view of a lush cotton plantation in Benin during a golden hour sunset. The rows of white cotton plants stretch towards the horizon, framed by deep green foliage and a clear orange sky. The scene conveys a sense of agricultural abundance, industrial precision, and environmental harmony, reflecting Krishi Agri's commitment to sustainable farming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNWiaRgvMjqyCxU9jC6RrQKUbmTMgN6u9bxJRAr1diOBiLWjKzT84HG8KCcu80gLyNwd8i40TDsFA2vU04Z_wVsuQw4Q4-xmGsJGhkZq3lPu8COD7d-5o5AlQhv9XCC94RQ5EPjo89nEi6e8Jgf7MVzj_DP8ttByFj2Z0ZPlCW30rGpZ2-3jwvCqR5xetNPmbwcFXF1dtKiX-uVn3q84YSwlMKQuaztAh-cVnE7uichnbqoBSqIwvkY_Bv1agOfEj_rj8skGoG6JE"/>
+            </div>
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+                <div class="max-w-3xl reveal">
+                    <span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase tracking-widest">Global Stewardship</span>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                        Nurturing the Soil of <br/><span class="text-secondary">Benin’s Future</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                        Beyond cotton processing, we are architecting a sustainable ecosystem that empowers local farmers, preserves biodiversity, and drives national prosperity through responsible industrialization.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Impact Stats: Bento Grid -->
+        <section class="py-20 bg-surface-container-low">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="mb-12 flex justify-between items-end">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Measurable Impact</h2>
+                        <p class="text-on-surface-variant">Transparency in our journey toward a zero-waste agricultural cycle.</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <span class="text-secondary font-bold">2023-2024 Report</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+                    <!-- Job Creation -->
+                    <div class="md:col-span-8 md:row-span-1 bg-white border border-outline-variant p-8 flex flex-col justify-between group reveal">
+                        <div>
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">groups</span>
+                            <h3 class="font-headline-md text-headline-md text-primary">5,000+ Direct Jobs</h3>
+                            <p class="text-on-surface-variant mt-2 max-w-md">Empowering the local workforce within the GDIZ industrial zone, prioritizing gender equality and technical skill development.</p>
+                        </div>
+                        <div class="text-6xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors">Employment</div>
+                    </div>
+                    <!-- GDP Contribution -->
+                    <div class="md:col-span-4 md:row-span-2 bg-primary text-on-primary p-8 flex flex-col justify-center items-center text-center reveal">
+                        <span class="font-label-caps text-label-caps mb-4 opacity-70">Economic Engine</span>
+                        <div class="text-7xl font-bold mb-4">1.2%</div>
+                        <p class="font-headline-md text-headline-md mb-4">Projected Contribution to National GDP</p>
+                        <p class="text-on-primary/70">Integrating Benin’s cotton sector into the global value chain through localized high-tech transformation.</p>
+                    </div>
+                    <!-- Carbon Offset -->
+                    <div class="md:col-span-4 md:row-span-1 bg-white border border-outline-variant p-8 reveal">
+                        <span class="material-symbols-outlined text-secondary text-4xl mb-4">eco</span>
+                        <h3 class="font-headline-md text-headline-md text-primary">40%</h3>
+                        <p class="text-on-surface-variant mt-2">Reduction in water waste through our closed-loop cooling systems.</p>
+                    </div>
+                    <!-- Farmer Training -->
+                    <div class="md:col-span-4 md:row-span-1 bg-secondary-container p-8 reveal">
+                        <span class="material-symbols-outlined text-on-secondary-container text-4xl mb-4">agriculture</span>
+                        <h3 class="font-headline-md text-headline-md text-on-secondary-container">12,000 Farmers</h3>
+                        <p class="text-on-secondary-container/80 mt-2">Trained in regenerative agricultural practices since 2022.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environmental Commitment Section -->
+        <section class="py-24">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 reveal">
+                    <img class="w-full aspect-[4/5] object-cover rounded-sm border border-outline-variant" data-alt="A close-up, high-detail photograph of a young green sprout emerging from rich, dark organic soil. The lighting is crisp and natural, highlighting the dew drops on the leaves. The background is a soft-focus agricultural field in Benin, reinforcing the theme of organic growth and ecological stewardship within a corporate sustainability context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBEt0gjn9XVnChriVzDLhaaxUdH90U9VNq4jRW-sj1Q442KtHZLQrlzzUoiugUlXGgpa2wF35QbTcbUWByVdKphNGMHtAf_fSSgkr8rGHJebqtq0DzXW4VE3WzED8oQVV6o4YOwHqUVYUxU5H4Xgl_xzz45nZwYAE1CCfrbQylvEHr8R48XchGjz4pJo2TFh_6k-rBQhdSHhbohdrQ3K4PNPcCCCpEfQzcnlYzX7ic3imNAq7dPuDwd5TRpEwkRsmxmEJ0jFx9uck"/>
+                </div>
+                <div class="order-1 md:order-2 reveal">
+                    <span class="font-label-caps text-label-caps text-secondary uppercase mb-4 block">The Green Standard</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Our Environmental Mandate</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="h-10 w-10 shrink-0 bg-primary-container/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">solar_power</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Renewable Energy Integration</h4>
+                                <p class="text-on-surface-variant">Our transformation facility is powered by a hybrid solar array, reducing dependence on non-renewable sources by 35%.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="h-10 w-10 shrink-0 bg-primary-container/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">recycling</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Zero-Waste Transformation</h4>
+                                <p class="text-on-surface-variant">Every byproduct of cotton seed processing—from hulls to oil—is repurposed into animal feed or biofuel.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="h-10 w-10 shrink-0 bg-primary-container/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">water_drop</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Sustainable Irrigation Support</h4>
+                                <p class="text-on-surface-variant">Partnering with farmers to implement drip-irrigation systems that save millions of liters of groundwater annually.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnerships / Farmer Programs -->
+        <section class="py-24 bg-primary text-on-primary">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <h2 class="font-headline-lg text-headline-lg mb-12 reveal">Community &amp; Farmer Partnerships</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 border border-on-primary/20 hover:bg-primary-container transition-all cursor-default reveal">
+                        <h3 class="font-headline-md text-headline-md mb-4">Seed Equity Program</h3>
+                        <p class="text-on-primary/70 mb-6">Providing high-yield, non-GMO cotton seeds to 50+ local cooperatives at subsidized rates to ensure crop resilience.</p>
+                        <a class="text-secondary-fixed font-bold hover:underline" href="sustainability.html#seed-equity">Learn More</a>
+                    </div>
+                    <div class="p-8 border border-on-primary/20 hover:bg-primary-container transition-all cursor-default reveal">
+                        <h3 class="font-headline-md text-headline-md mb-4">GDIZ Skill Academy</h3>
+                        <p class="text-on-primary/70 mb-6">A specialized vocational training center designed to bridge the gap between traditional farming and industrial processing.</p>
+                        <a class="text-secondary-fixed font-bold hover:underline" href="careers.html">View Programs</a>
+                    </div>
+                    <div class="p-8 border border-on-primary/20 hover:bg-primary-container transition-all cursor-default reveal">
+                        <h3 class="font-headline-md text-headline-md mb-4">Micro-Finance Link</h3>
+                        <p class="text-on-primary/70 mb-6">Facilitating access to credit for smallholder farmers to invest in sustainable machinery and modern storage units.</p>
+                        <a class="text-secondary-fixed font-bold hover:underline" href="sustainability.html#micro-finance">Partner News</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-20 bg-background">
+            <div class="max-w-3xl mx-auto px-margin-mobile text-center reveal">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Investing in Benin's Ecological Legacy</h2>
+                <p class="text-on-surface-variant mb-10">We believe industrial growth must never come at the expense of our heritage. Join us in building a greener, more prosperous Africa.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="sustainability.html#report" class="bg-primary text-on-primary px-10 py-4 font-bold rounded-sm inline-block">Download Impact Report</a>
+                    <a href="contact.html" class="bg-white text-secondary border border-secondary px-10 py-4 font-bold rounded-sm hover:bg-secondary-container transition-colors inline-block">Become a Partner</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-max-width mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-md text-headline-md text-on-primary mb-6">Krishi Agri Benin</div>
+                <p class="text-on-primary/60 font-body-md mb-8">Empowering West African agriculture through innovation and industrial scale.</p>
+                <div class="flex gap-4">
+                    <a href="index.html" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">public</a>
+                    <a href="mailto:contact@krishiagribenin.com" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">mail</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">QUICK LINKS</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="about.html">About Us</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="products.html">Products &amp; Services</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">RESOURCES</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability Report</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">CONTACT</h4>
+                <address class="not-italic text-on-primary/80 space-y-4 font-body-md">
+                    <p>Glo-Djigbé Industrial Zone (GDIZ)<br/>Abomey-Calavi, Benin</p>
+                    <p>contact@krishiagribenin.com</p>
+                    <p>+229 00 00 00 00</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-8 max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-on-primary/60 text-sm">
+            <div>© 2024 Krishi Agri Benin. All rights reserved. Located at GDIZ, Benin.</div>
+            <div class="flex gap-8">
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function openMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0', 'is-open');
+                mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                mobileOverlay.classList.add('opacity-100');
+                document.body.classList.add('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.add('is-open'); menuBtn.setAttribute('aria-expanded','true'); }
+            }
+        }
+        function closeMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-0', 'is-open');
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.remove('opacity-100');
+                mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded','false'); }
+            }
+        }
+        if (menuBtn) menuBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+        if (mobileMenu) { mobileMenu.querySelectorAll('nav a').forEach(l => l.addEventListener('click', closeMenu)); }
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

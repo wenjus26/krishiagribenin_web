@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Careers | Krishi Agri Benin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+        .reveal { opacity:0; transform:translateY(20px); transition:all 0.8s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.active { opacity:1; transform:translateY(0); }
+        .hamburger { display:flex; flex-direction:column; justify-content:center; gap:5px; width:32px; height:32px; cursor:pointer; padding:2px; }
+        .hamburger span { display:block; height:2px; background:#173901; border-radius:2px; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); transform-origin:center; }
+        .hamburger span:nth-child(1) { width:100%; }
+        .hamburger span:nth-child(2) { width:75%; }
+        .hamburger span:nth-child(3) { width:100%; }
+        .hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); width:100%; }
+        .hamburger.is-open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); width:100%; }
+        #mobile-menu nav a { opacity:0; transform:translateX(20px); transition:opacity 0.3s ease,transform 0.3s ease,color 0.2s ease; }
+        #mobile-menu.is-open nav a { opacity:1; transform:translateX(0); }
+        #mobile-menu.is-open nav a:nth-child(1) { transition-delay:0.08s; }
+        #mobile-menu.is-open nav a:nth-child(2) { transition-delay:0.14s; }
+        #mobile-menu.is-open nav a:nth-child(3) { transition-delay:0.20s; }
+        #mobile-menu.is-open nav a:nth-child(4) { transition-delay:0.26s; }
+        #mobile-menu.is-open nav a:nth-child(5) { transition-delay:0.32s; }
+        #mobile-menu .mobile-cta { opacity:0; transform:translateY(10px); transition:opacity 0.3s ease 0.38s,transform 0.3s ease 0.38s; }
+        #mobile-menu.is-open .mobile-cta { opacity:1; transform:translateY(0); }
+    </style>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join Krishi Agri Benin — West Africa's leading agro-industrial company at GDIZ. Explore career opportunities in engineering, logistics, R&D, and corporate services.">
+    <meta name="keywords" content="careers Benin agribusiness, jobs GDIZ, agro-industry employment West Africa, Krishi Agri Benin jobs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krishiagribenin.rejustewenoumi.com/careers.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Careers | Krishi Agri Benin">
+    <meta property="og:description" content="Build a meaningful career at the intersection of innovation, sustainability, and industrial growth in West Africa's premier agro-industrial hub.">
+    <meta property="og:url" content="https://krishiagribenin.rejustewenoumi.com/careers.html">
+    <meta property="og:site_name" content="Krishi Agri Benin">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Careers | Krishi Agri Benin">
+    <meta name="twitter:description" content="Explore rewarding careers at Krishi Agri Benin — GDIZ, Benin.">
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#173901",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e2e3e0",
+                      "tertiary-fixed": "#e4e2e1",
+                      "outline": "#73796c",
+                      "on-primary-fixed-variant": "#2c4f15",
+                      "on-primary-fixed": "#0a2100",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-tertiary-container": "#b7b5b5",
+                      "inverse-surface": "#2e312f",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#745c00",
+                      "surface-container": "#edeeeb",
+                      "primary-container": "#2d5016",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-bright": "#f9faf7",
+                      "background": "#f9faf7",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#d9dad7",
+                      "primary-fixed-dim": "#a8d38a",
+                      "surface-container-high": "#e7e8e6",
+                      "on-primary-container": "#98c27b",
+                      "on-surface-variant": "#43493d",
+                      "on-surface": "#191c1b",
+                      "secondary": "#735c00",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e2e3e0",
+                      "surface-tint": "#43682b",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#a8d38a",
+                      "tertiary-fixed-dim": "#c8c6c6",
+                      "outline-variant": "#c3c9b9",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "tertiary": "#313131",
+                      "secondary-container": "#fed65b",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "surface": "#f9faf7",
+                      "on-background": "#191c1b",
+                      "surface-container-low": "#f3f4f1",
+                      "inverse-on-surface": "#f0f1ee",
+                      "tertiary-container": "#474747",
+                      "primary-fixed": "#c4efa3",
+                      "secondary-fixed": "#ffe088"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "max-width": "1280px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-secondary h-20 transition-all duration-300">
+        <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-full w-full">
+            <a href="index.html" class="text-xl sm:text-headline-md font-bold text-primary hover:opacity-90 transition-opacity whitespace-nowrap">Krishi Agri Benin</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a id="nav-home" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="index.html">Home</a>
+                <a id="nav-about" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="about.html">About Us</a>
+                <a id="nav-products" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="products.html">Products &amp; Services</a>
+                <a id="nav-sustainability" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="sustainability.html">Sustainability</a>
+                <a id="nav-contact" class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-body-md text-body-md" href="contact.html">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all">
+                    Partner With Us
+                </a>
+                <button id="menu-btn" class="hamburger md:hidden focus:outline-none" aria-label="Toggle Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Mobile Nav Drawer (Premium) -->
+    <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-[300px] max-w-[88vw] bg-white z-[100] shadow-2xl flex flex-col md:hidden translate-x-full transition-transform duration-350 ease-in-out" style="transition-timing-function: cubic-bezier(0.4,0,0.2,1);">
+        <!-- Drawer Header -->
+        <div class="flex justify-between items-center px-6 py-5 border-b-2 border-secondary bg-white">
+            <a href="index.html" class="font-bold text-primary text-lg tracking-tight">Krishi Agri Benin</a>
+            <button id="close-menu-btn" class="hamburger is-open focus:outline-none" aria-label="Close Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Nav Links -->
+        <nav class="flex flex-col px-6 pt-6 pb-4 flex-1 overflow-y-auto">
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="index.html">
+                <span class="material-symbols-outlined text-xl">home</span>Home
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="about.html">
+                <span class="material-symbols-outlined text-xl">info</span>About Us
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="products.html">
+                <span class="material-symbols-outlined text-xl">inventory_2</span>Products &amp; Services
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="sustainability.html">
+                <span class="material-symbols-outlined text-xl">eco</span>Sustainability
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="contact.html">
+                <span class="material-symbols-outlined text-xl">mail</span>Contact
+            </a>
+            <a class="flex items-center gap-3 text-primary font-bold text-lg py-3.5 transition-colors" href="careers.html">
+                <span class="material-symbols-outlined text-xl">work</span>Careers
+            </a>
+        </nav>
+
+        <!-- Drawer Footer CTA -->
+        <div class="mobile-cta px-6 pb-8 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+            <a class="bg-primary text-on-primary text-center py-3.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all rounded-sm" href="contact.html">
+                Partner With Us
+            </a>
+            <div class="flex justify-center gap-6 pt-2">
+                <a href="mailto:contact@krishiagribenin.com" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">mail</span> Email
+                </a>
+                <a href="tel:+22900000000" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">call</span> Call
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[819px] w-full overflow-hidden flex items-center">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" data-alt="A wide-angle cinematic shot of a modern, high-tech industrial facility located in a lush West African landscape under bright daylight. The architectural structure of GDIZ is clean and minimalist with large glass windows reflecting the green surroundings. A group of professional men and women from diverse backgrounds are walking purposefully in the foreground, wearing smart business and technical attire. The scene is bathed in warm, professional lighting, emphasizing a mood of innovation and industrial leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEI0AigTI5x6GkVG6JtEXKZxYLZAL8FeOe3T2rN5acaFJM1uCqaSjeFmfYeiKAwWf2NA4gVk02PXKMscbOKNT07tufLD7rB_CfnPFIo9FRme2aDMBx5Sz8XwigRNE33uDPi5AyBvR4m4rAs0MqgLi--8DqEYJ2iKHtsSJO7RjTocntVhKKy987YPUV26MOq1im078aReR2yVCTk1zFgdgEEvbE5dffWKb4tF6cr3OPtxRT8cyXBKHdIdb0Oa8dW2kAGW8jSBdX6CU"/>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+            </div>
+            <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+                <div class="max-w-3xl reveal">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6 leading-tight">Join the Future of West African Agro-Industry</h1>
+                    <p class="font-body-lg text-body-lg text-on-primary/90 mb-10">Build a meaningful career at the intersection of innovation, sustainability, and industrial growth. We are transforming the agricultural landscape of Benin.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-bold text-body-md hover:bg-secondary hover:text-white transition-colors inline-block" href="#open-positions">View Open Positions</a>
+                        <a class="border border-on-primary text-on-primary px-8 py-4 rounded-lg font-bold text-body-md hover:bg-on-primary hover:text-primary transition-all inline-block" href="#why-join">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join Us Section -->
+        <section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto" id="why-join">
+            <div class="text-center mb-16 reveal">
+                <p class="font-label-caps text-label-caps text-secondary mb-2">OUR VALUE PROPOSITION</p>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Why Join Krishi Agri Benin?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter reveal">
+                <!-- Benefit 1 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-colors group bg-white">
+                    <div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-on-primary">trending_up</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Professional Growth</h3>
+                    <p class="text-on-surface-variant">Continuous learning opportunities through international workshops, technical training, and leadership development programs.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-colors group bg-white">
+                    <div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-on-primary">payments</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Competitive Compensation</h3>
+                    <p class="text-on-surface-variant">We offer industry-leading salaries, comprehensive health benefits, and performance-based incentives for all team members.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-colors group bg-white">
+                    <div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-on-primary">eco</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Impactful Work</h3>
+                    <p class="text-on-surface-variant">Directly contribute to West Africa's economic sovereignty by modernizing cotton seed transformation and supporting local farmers.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-colors group bg-white">
+                    <div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-on-primary">diversity_3</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Inclusive Culture</h3>
+                    <p class="text-on-surface-variant">A collaborative environment where diverse perspectives are celebrated and professional integrity is the standard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Departments Bento Grid -->
+        <section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-max-width mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                    <div class="max-w-2xl">
+                        <p class="font-label-caps text-label-caps text-secondary mb-2">FIND YOUR PLACE</p>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">Specialized Departments</h2>
+                        <p class="mt-4 text-on-surface-variant">Explore the diverse sectors of our organization where you can apply your expertise and lead change.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter reveal">
+                    <div class="md:col-span-8 group relative overflow-hidden h-[400px]">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated industrial setting showing a clean Operations and Engineering control room. Engineers in high-visibility vests are monitoring large-scale automated machinery through multiple high-resolution digital interfaces. The lighting is crisp and cool, creating an atmosphere of technological precision. The overall aesthetic is modern, professional, and institutional, highlighting the advanced industrial nature of the GDIZ facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChKBX5okzh6bD9xT-GywJqlag_fPjj_HlvDolMaDeQ5p2ew1TzGBpHyIrrDAALj4sb9ZEUZTq8z8JQncSAvoo1j3q50b1NPUB_mzHOAC-55fCgOpTUzw33GNcB1GMGIxfjRKVoLhMM1sa7YwpLZHOMxi1aoh8wgd5K23qKvRuXXl6aNW16uB_GGRXtZP7m6y5f1yVXMIKhvsgj9SxJIe91KMTk0ZR8LNijFGBKa45681-QugXbxiNjed5aF5qewGEuUGXK9rAxcas"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="font-headline-md text-headline-md text-on-primary mb-2">Operations &amp; Engineering</h3>
+                            <p class="text-on-primary/80 max-w-md">Driving industrial excellence through high-tech seed transformation and process optimization.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 group relative overflow-hidden h-[400px]">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sterile and minimalist research laboratory with white surfaces and sophisticated scientific equipment. A scientist in a white coat is carefully examining cotton seed samples under bright, clinical light. The scene represents professional rigor and institutional expertise. The color palette is dominated by clean whites and the corporate primary green accents in the equipment details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDSx0qsh67_lc33RIIjUiPCZ-KnTBxVaFP3qW8NCqDSeJeAQa6dVMqejo5MdhjC2BfsA-ifflA8W5lmbVCUttZxqFpZTaD-XGH67Fynb7Rtf-B3cDhh8orfB3Z_UkkYmTZ8LWgNTLp-4kq9aJq7DRnCLexK4PdlRz4QTTfvGSt19lll44VJnE69EBmT-2Tmpso20YFAhSuKx8A5Il9X563vk_oZH9CnkybCQLBuyKUIHvKgrnylk3wBb2O-TnyMxj1RA4fNPHiL8"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="font-headline-md text-headline-md text-on-primary mb-2">Research &amp; Development</h3>
+                            <p class="text-on-primary/80">Pioneering sustainable agricultural solutions and next-generation seed technology.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 group relative overflow-hidden h-[400px]">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide view of a modern logistics hub and warehouse at the GDIZ industrial zone. Organized stacks of products are seen within a vast, clean facility with natural light streaming through high vents. Logistics professionals are coordinating movement using digital tablets. The mood is efficient, stable, and highly organized, reflecting institutional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPLOovDn4NpYepa-Xs_VowXwgx00W7GanUl0evYbWVnLLW6D-EOPa4uuvgkSLKRVY8kr8sq8Dr-b2NPMGBNe9aR20G-Lbssas-OTUxuw5ZgQgqY5AN_2sDB4BLtZXc5gQKt3g5ZZDlqQFExQ7ir4wA-uQtyAEnXE4JHmY51sdEDieA3Yvpx8OW2JQAWotNoUdyJtkAph5TEeUUTnENdFKIVfVpq1wirc4zRtPUP-ByaUIop07pL9rVkdDwTAWyPA0RPJzZzb9g3io"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="font-headline-md text-headline-md text-on-primary mb-2">Logistics &amp; Supply Chain</h3>
+                            <p class="text-on-primary/80">Connecting our products to the world with precision and efficiency across the region.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8 group relative overflow-hidden h-[400px]">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A bright, high-end corporate office environment with a minimalist design. A group of diverse professionals are engaged in a meeting around a sleek wooden table. The room has floor-to-ceiling windows showing the greenery of Benin. The lighting is soft and natural, creating an atmosphere of trust, collaboration, and executive leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfH1BxT5IGEAhRc4M2M8-CKdhhv9MBNkl_T6PHgbug6TH9EKz_MSE-aRNPEBQVNLlbBd6MjoBRB-xqh_32AbE4r6hPYWCSOAwSRPiUsJJ1OKS0dg2P8XHeOW91A_8OCNEQZ3xrMlee9dJWlEdivVs2yjyIwe0SZXNIecmWHuauYYnBM3SNSEDbFDLubmzWr1r3vHGIfdyGdRlJqjHv3Uy--MQU2F_M4wRWLLcz_Molv69mjEx-rnNNbuVgpfaG59W7FZaxmXuM-3k"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <h3 class="font-headline-md text-headline-md text-on-primary mb-2">Corporate Services</h3>
+                            <p class="text-on-primary/80 max-w-md">The institutional backbone, managing Finance, HR, Legal, and International Relations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Process Infographic (Imported from Careers 1) -->
+        <section class="py-24 bg-surface px-margin-mobile md:px-margin-desktop" id="process">
+            <div class="max-w-max-width mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Your Journey Starts Here</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto mt-4">Transparent, rigorous, and professional. Our selection process ensures we find the best fit for our mission.</p>
+                </div>
+                <div class="relative reveal">
+                    <!-- Progress Line -->
+                    <div class="absolute top-1/2 left-0 w-full h-1 bg-outline-variant -translate-y-1/2 hidden md:block"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative z-10">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center text-center bg-white p-8 border border-outline-variant">
+                            <div class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mb-6 ring-8 ring-background">1</div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Application</h4>
+                            <p class="text-on-surface-variant text-body-md">Submit your CV and cover letter through our portal.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center text-center bg-white p-8 border border-outline-variant">
+                            <div class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mb-6 ring-8 ring-background">2</div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Initial Screening</h4>
+                            <p class="text-on-surface-variant text-body-md">Our HR team reviews profiles against role requirements.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center text-center bg-white p-8 border border-outline-variant">
+                            <div class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mb-6 ring-8 ring-background">3</div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Technical Interview</h4>
+                            <p class="text-on-surface-variant text-body-md">Showcase your expertise with our department heads.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex flex-col items-center text-center bg-white p-8 border border-outline-variant">
+                            <div class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mb-6 ring-8 ring-background">4</div>
+                            <h4 class="font-headline-md text-headline-md mb-2">Final Selection</h4>
+                            <p class="text-on-surface-variant text-body-md">Onboarding into the Krishi Agri Benin family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Positions Section -->
+        <section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="open-positions">
+            <div class="max-w-max-width mx-auto">
+                <div class="reveal mb-12">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Open Opportunities</h2>
+                    <div class="flex flex-col md:flex-row gap-4 items-center">
+                        <div class="relative w-full md:max-w-md">
+                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+                            <input id="job-search" class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg transition-all outline-none" placeholder="Search by job title or keyword..." type="text"/>
+                        </div>
+                        <select id="department-select" class="w-full md:w-auto px-4 py-3 bg-surface border border-outline-variant focus:border-primary rounded-lg outline-none">
+                            <option value="all">All Departments</option>
+                            <option value="operations">Operations &amp; Engineering</option>
+                            <option value="rd">Research &amp; Development</option>
+                            <option value="logistics">Logistics &amp; Supply Chain</option>
+                            <option value="corporate">Corporate Services</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="jobs-container" class="space-y-4 reveal">
+                    <!-- Job Card 1 -->
+                    <div class="job-card group bg-surface border border-outline-variant hover:border-secondary p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center transition-all cursor-pointer" data-dept="operations">
+                        <div>
+                            <span class="font-label-caps text-label-caps text-secondary mb-2 block">OPERATIONS</span>
+                            <h4 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Senior Process Engineer</h4>
+                            <div class="flex gap-6 mt-2 text-on-surface-variant">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> GDIZ, Benin</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <button class="mt-6 md:mt-0 border border-primary text-primary px-6 py-2 rounded font-bold hover:bg-primary hover:text-on-primary transition-all">Apply Now</button>
+                    </div>
+                    <!-- Job Card 2 -->
+                    <div class="job-card group bg-surface border border-outline-variant hover:border-secondary p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center transition-all cursor-pointer" data-dept="logistics">
+                        <div>
+                            <span class="font-label-caps text-label-caps text-secondary mb-2 block">LOGISTICS</span>
+                            <h4 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Supply Chain Coordinator</h4>
+                            <div class="flex gap-6 mt-2 text-on-surface-variant">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> GDIZ, Benin</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <button class="mt-6 md:mt-0 border border-primary text-primary px-6 py-2 rounded font-bold hover:bg-primary hover:text-on-primary transition-all">Apply Now</button>
+                    </div>
+                    <!-- Job Card 3 -->
+                    <div class="job-card group bg-surface border border-outline-variant hover:border-secondary p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center transition-all cursor-pointer" data-dept="corporate">
+                        <div>
+                            <span class="font-label-caps text-label-caps text-secondary mb-2 block">CORPORATE</span>
+                            <h4 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">HR Business Partner</h4>
+                            <div class="flex gap-6 mt-2 text-on-surface-variant">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> GDIZ, Benin</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <button class="mt-6 md:mt-0 border border-primary text-primary px-6 py-2 rounded font-bold hover:bg-primary hover:text-on-primary transition-all">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Life at Krishi Agri Benin Gallery -->
+        <section class="py-24 bg-surface-container-highest px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-max-width mx-auto">
+                <div class="mb-16 reveal">
+                    <p class="font-label-caps text-label-caps text-primary mb-2 text-center">OUR COMMUNITY</p>
+                    <h2 class="font-headline-lg text-headline-lg text-primary text-center">Life at Krishi Agri Benin</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+                    <div class="aspect-square overflow-hidden group">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="A candid photo of Krishi Agri Benin employees laughing during a coffee break in a bright, modern cafeteria. The space is decorated with plants and stylish wooden furniture. The lighting is warm and inviting, showing the company's vibrant and inclusive culture. The shot is high-key and professional, highlighting a positive work environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY4nwWFBI3wUhd7WyFNVvy3LTLWD54cfsjQNLQO0RzfrtZpud-QfByT1T6ANjRCme2oXhsrudYq4Jk3WuGYZhW1GeKmhvVGuWOqU_QH5sT6sIExuq0TSdc3HfBfI6xCPqTPjweT4iC3FgzxlKZ1j-4bUkfiqMZG9nYYROZlS8uVT7uazJ3ECs4PUY0fWREwbkxrAHWPu17pgtIOaGvVu6og5oTqeFscaUn8DK506AL4_GbW0VWqICCby0x_lOaYXhSfpvyur_GmxU"/>
+                    </div>
+                    <div class="aspect-square overflow-hidden group">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="A diverse group of young professionals in Benin sitting in a circle during outdoor workshops at the GDIZ park. They are engaged in an active discussion, representing team collaboration and institutional transparency. The background shows the modern industrial architecture under a soft afternoon sun. The aesthetic is clean and corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDftp88PqlUGMaf2-FfzveANuOOtexpMGUaDBrpMKM4bz0ppxSKtkykxVjc61Ic1lNNj75zoYnHuG9_8sO5kmmoufdhAIuqlPCfciWlFnbH9Q6e_PScQ5DiWBKJIEzlceWp8CdVKd7IwuikXm9Y4_3Rcd-7iNqXzAuzQCCYmDNsindUbeYLDQz7JAupY0csx6ychFkYUubJUjbTIQmG7fSKm9zo3YSx10dKtrzWMRs7Khfs_jHOITl0b6JK7I3aYEgN7s0FKv6v7_s"/>
+                    </div>
+                    <div class="aspect-square overflow-hidden group">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="A high-tech industrial workstation at the Benin facility where an employee is precisely calibrating an automated processing machine. The focus is on the intricate mechanical parts and the digital interface. The lighting is sharp and technical, emphasizing the brand's commitment to industrial excellence and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTLcPg6vF7U7-wv8g121B-yXZ_96EZMaGuSAf406ZQYh2Nq68CNCw1szSHSbuVkMIgPjBK9tZ96c_srGFiMZpbZNaurTf3bSqHAKP085VRKmgDLKo46-Zg00MNharzeIsYlEw4nT3A-bQfOAWFw5QJ77lLj2flIdUTfZqJ_WDsGU3Ze-UEWeQ2szTCevwk2wL-gr2QLvahcNVotmjYibifffhIJ6MqzWWByN8Na61NpgM4slrf3sw7Bmk_Gf6SsSWQmztk_aDO0_w"/>
+                    </div>
+                    <div class="aspect-square overflow-hidden group">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="A leadership team meeting in a glass-walled conference room at Krishi Agri Benin. A presentation is visible on a large screen showing agricultural data charts in the brand's green and gold palette. The mood is authoritative and professional, highlighting the multinational scale of operations. The lighting is soft and corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd5OyK8f6WCxZGDOwInhq_X4wp55vmY30fR5K_GynLy7am9i34Wn1mI5EhYJxOou4KSrhhJUKe8iijjcO4suPhKXr6jlpzA2ioGgPzSV8Z1rMs0z9kK76Txlf_HzQ9rDb0uJBhaDvx-TvM-StGIcadoRGujN1P_rOlbXJMbevQ3KXEaclAp4LFgJStuDlt0PQoJcqcaG7W0rBuu8uoj-bu4BElndYSEk5f0DV5Z976clP-t0K9fl1eexSqma-WPQcF6JbdAhGyCYg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- General Application CTA -->
+        <section class="py-24 bg-primary text-on-primary">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto text-center reveal">
+                <h2 class="font-headline-lg text-headline-lg mb-6 text-white">Don't see a fit?</h2>
+                <p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto text-on-primary/80">We are always looking for exceptional talent to join our mission. Send us your CV for future opportunities across all our departments.</p>
+                <a href="contact.html?type=general-application" class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-lg font-bold text-body-md hover:bg-secondary-fixed-dim transition-all active:scale-95 shadow-lg inline-block">General Application</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-max-width mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-md text-headline-md text-on-primary mb-6">Krishi Agri Benin</div>
+                <p class="text-on-primary/60 font-body-md mb-8">Empowering West African agriculture through innovation and industrial scale.</p>
+                <div class="flex gap-4">
+                    <a href="index.html" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">public</a>
+                    <a href="mailto:contact@krishiagribenin.com" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">mail</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">QUICK LINKS</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="about.html">About Us</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="products.html">Products &amp; Services</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">RESOURCES</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability Report</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">CONTACT</h4>
+                <address class="not-italic text-on-primary/80 space-y-4 font-body-md">
+                    <p>Glo-Djigbé Industrial Zone (GDIZ)<br/>Abomey-Calavi, Benin</p>
+                    <p>contact@krishiagribenin.com</p>
+                    <p>+229 00 00 00 00</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-8 max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-on-primary/60 text-sm">
+            <div>© 2024 Krishi Agri Benin. All rights reserved. Located at GDIZ, Benin.</div>
+            <div class="flex gap-8">
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu controls
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function openMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0', 'is-open');
+                mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                mobileOverlay.classList.add('opacity-100');
+                document.body.classList.add('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.add('is-open'); menuBtn.setAttribute('aria-expanded','true'); }
+            }
+        }
+        function closeMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-0', 'is-open');
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.remove('opacity-100');
+                mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded','false'); }
+            }
+        }
+        if (menuBtn) menuBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+        if (mobileMenu) { mobileMenu.querySelectorAll('nav a').forEach(l => l.addEventListener('click', closeMenu)); }
+
+        // Intersection Observer for scroll animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => observer.observe(el));
+
+        // Job filter functionality
+        const searchInput = document.getElementById('job-search');
+        const deptSelect = document.getElementById('department-select');
+        const jobCards = document.querySelectorAll('.job-card');
+
+        function filterJobs() {
+            const query = searchInput.value.toLowerCase();
+            const selectedDept = deptSelect.value;
+
+            jobCards.forEach(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const cardDept = card.getAttribute('data-dept');
+
+                const matchesSearch = title.includes(query);
+                const matchesDept = selectedDept === 'all' || cardDept === selectedDept;
+
+                if (matchesSearch && matchesDept) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        if (searchInput && deptSelect) {
+            searchInput.addEventListener('input', filterJobs);
+            deptSelect.addEventListener('change', filterJobs);
+        }
+
+        // Apply click events to job cards
+        jobCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.querySelector('h4').textContent;
+                window.location.href = `contact.html?subject=Application for ${encodeURIComponent(title)}`;
+            });
+        });
+    </script>
+</body>
+</html>

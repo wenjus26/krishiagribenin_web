@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Products &amp; Services | Krishi Agri Benin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); }
+        .reveal-up { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.4,0,0.2,1); }
+        .reveal-up.visible { opacity: 1; transform: translateY(0); }
+        .hamburger { display:flex; flex-direction:column; justify-content:center; gap:5px; width:32px; height:32px; cursor:pointer; padding:2px; }
+        .hamburger span { display:block; height:2px; background:#173901; border-radius:2px; transition:all 0.35s cubic-bezier(0.4,0,0.2,1); transform-origin:center; }
+        .hamburger span:nth-child(1) { width:100%; }
+        .hamburger span:nth-child(2) { width:75%; }
+        .hamburger span:nth-child(3) { width:100%; }
+        .hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); width:100%; }
+        .hamburger.is-open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+        .hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); width:100%; }
+        #mobile-menu nav a { opacity:0; transform:translateX(20px); transition:opacity 0.3s ease,transform 0.3s ease,color 0.2s ease; }
+        #mobile-menu.is-open nav a { opacity:1; transform:translateX(0); }
+        #mobile-menu.is-open nav a:nth-child(1) { transition-delay:0.08s; }
+        #mobile-menu.is-open nav a:nth-child(2) { transition-delay:0.14s; }
+        #mobile-menu.is-open nav a:nth-child(3) { transition-delay:0.20s; }
+        #mobile-menu.is-open nav a:nth-child(4) { transition-delay:0.26s; }
+        #mobile-menu.is-open nav a:nth-child(5) { transition-delay:0.32s; }
+        #mobile-menu .mobile-cta { opacity:0; transform:translateY(10px); transition:opacity 0.3s ease 0.38s,transform 0.3s ease 0.38s; }
+        #mobile-menu.is-open .mobile-cta { opacity:1; transform:translateY(0); }
+    </style>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Krishi Agri Benin offers premium cotton seed oil transformation, advanced cotton ginning services, and industrial agro-processing at GDIZ, Benin. ISO 9001 & HACCP certified.">
+    <meta name="keywords" content="cotton seed oil Benin, cotton ginning GDIZ, agro-industry West Africa, Krishi Agri Benin products">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://krishiagribenin.rejustewenoumi.com/products.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Products &amp; Services | Krishi Agri Benin">
+    <meta property="og:description" content="World-class cotton seed transformation and ginning services from Benin's premier agro-industrial hub at GDIZ. ISO certified, export-grade quality.">
+    <meta property="og:url" content="https://krishiagribenin.rejustewenoumi.com/products.html">
+    <meta property="og:site_name" content="Krishi Agri Benin">
+    <meta property="og:image" content="https://krishiagribenin.rejustewenoumi.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Products &amp; Services | Krishi Agri Benin">
+    <meta name="twitter:description" content="World-class cotton seed transformation and ginning at GDIZ, Benin.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Premium Cotton Seed Oil",
+      "brand": { "@type": "Organization", "name": "Krishi Agri Benin" },
+      "description": "Triple-refined, nutrient-rich cotton seed oil produced at GDIZ, Benin for international distribution.",
+      "url": "https://krishiagribenin.rejustewenoumi.com/products.html"
+    }
+    </script>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f9faf7",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f0f1ee",
+                      "on-surface-variant": "#43493d",
+                      "surface-variant": "#e2e3e0",
+                      "outline": "#73796c",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "surface-tint": "#43682b",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#0a2100",
+                      "on-surface": "#191c1b",
+                      "surface-container-highest": "#e2e3e0",
+                      "tertiary-fixed": "#e4e2e1",
+                      "inverse-surface": "#2e312f",
+                      "surface-dim": "#d9dad7",
+                      "surface-container-high": "#e7e8e6",
+                      "tertiary-container": "#474747",
+                      "secondary-fixed-dim": "#e9c349",
+                      "secondary-container": "#fed65b",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#2c4f15",
+                      "inverse-primary": "#a8d38a",
+                      "primary-fixed-dim": "#a8d38a",
+                      "on-tertiary-container": "#b7b5b5",
+                      "on-primary-container": "#98c27b",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#c4efa3",
+                      "on-secondary-container": "#745c00",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#191c1b",
+                      "primary": "#173901",
+                      "on-secondary-fixed": "#241a00",
+                      "primary-container": "#2d5016",
+                      "surface": "#f9faf7",
+                      "secondary": "#735c00",
+                      "surface-bright": "#f9faf7",
+                      "surface-container": "#edeeeb",
+                      "tertiary-fixed-dim": "#c8c6c6",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "surface-container-low": "#f3f4f1",
+                      "tertiary": "#313131",
+                      "on-secondary-fixed-variant": "#574500",
+                      "outline-variant": "#c3c9b9",
+                      "secondary-fixed": "#ffe088"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-secondary h-20 flex items-center">
+        <nav class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full flex justify-between items-center h-full">
+            <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary hover:opacity-90 transition-opacity">Krishi Agri Benin</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 h-full">
+                <a id="nav-home" class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.html">Home</a>
+                <a id="nav-about" class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="about.html">About Us</a>
+                <a id="nav-products" class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md" href="products.html">Products &amp; Services</a>
+                <a id="nav-sustainability" class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="sustainability.html">Sustainability</a>
+                <a id="nav-contact" class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="contact.html">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all">
+                    Partner With Us
+                </a>
+                <button id="menu-btn" class="hamburger md:hidden focus:outline-none" aria-label="Toggle Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] md:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Mobile Nav Drawer (Premium) -->
+    <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-[300px] max-w-[88vw] bg-white z-[100] shadow-2xl flex flex-col md:hidden translate-x-full transition-transform duration-350 ease-in-out" style="transition-timing-function: cubic-bezier(0.4,0,0.2,1);">
+        <!-- Drawer Header -->
+        <div class="flex justify-between items-center px-6 py-5 border-b-2 border-secondary bg-white">
+            <a href="index.html" class="font-bold text-primary text-lg tracking-tight">Krishi Agri Benin</a>
+            <button id="close-menu-btn" class="hamburger is-open focus:outline-none" aria-label="Close Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Nav Links -->
+        <nav class="flex flex-col px-6 pt-6 pb-4 flex-1 overflow-y-auto">
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="index.html">
+                <span class="material-symbols-outlined text-xl">home</span>Home
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="about.html">
+                <span class="material-symbols-outlined text-xl">info</span>About Us
+            </a>
+            <a class="flex items-center gap-3 text-primary font-bold text-lg py-3.5 border-b border-outline-variant/20 hover:text-secondary transition-colors" href="products.html">
+                <span class="material-symbols-outlined text-xl">inventory_2</span>Products &amp; Services
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="sustainability.html">
+                <span class="material-symbols-outlined text-xl">eco</span>Sustainability
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 border-b border-outline-variant/20 transition-colors" href="contact.html">
+                <span class="material-symbols-outlined text-xl">mail</span>Contact
+            </a>
+            <a class="flex items-center gap-3 text-on-surface-variant hover:text-secondary text-lg py-3.5 transition-colors" href="careers.html">
+                <span class="material-symbols-outlined text-xl">work</span>Careers
+            </a>
+        </nav>
+
+        <!-- Drawer Footer CTA -->
+        <div class="mobile-cta px-6 pb-8 pt-4 border-t border-outline-variant/20 flex flex-col gap-3">
+            <a class="bg-primary text-on-primary text-center py-3.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all rounded-sm" href="contact.html">
+                Partner With Us
+            </a>
+            <div class="flex justify-center gap-6 pt-2">
+                <a href="mailto:contact@krishiagribenin.com" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">mail</span> Email
+                </a>
+                <a href="tel:+22900000000" class="flex items-center gap-1.5 text-primary hover:text-secondary transition-colors text-sm font-semibold">
+                    <span class="material-symbols-outlined" style="font-size:18px">call</span> Call
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-primary/20 z-10"></div>
+            <img alt="Krishi Agri Benin Industrial Facility" class="absolute inset-0 w-full h-full object-cover" data-alt="A wide-angle landscape shot of a high-tech cotton processing plant in Benin. Large industrial silos and modern architectural lines of a factory are illuminated by the warm, golden hour light of the setting sun. The scene conveys a sense of institutional scale, precision, and professional agricultural excellence within a clean, modern environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWq2jv35l33E8fNfZQA1S5Ric4nCrhzj-_JeyKZ-5dGwOVSV8TrTbFoe6DU2ZsLt8CrB_7bjy6o5hLWjDCKbx_1GY6HzGGON1L1jQ_Gn_4pEXMZOSqM_5SYeweboD7S1v4nsObzXpQ1lI5Zv_hRaHrdmwoeKv_o7Lai5S7-aFUfRBnW1y98sXR0-CK4hJQZWamCBNGakqkOcRG2g7s90DqDN_HCzJwBzxV4WSuvD2-0JJiZpaiw8Jgndn2ijGO7E-KZUYMMwu5sOE"/>
+            <div class="relative z-20 text-center px-margin-mobile">
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-4">Precision Agriculture, Industrial Scale.</h1>
+                <p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">Providing world-class cotton seed transformation and ginning services to global and regional markets.</p>
+            </div>
+        </section>
+
+        <!-- Product Section 1: Cotton Seed Oil -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <div class="flex flex-col md:flex-row gap-gutter items-center mb-16">
+                <div class="w-full md:w-1/2 reveal-up">
+                    <p class="font-label-caps text-label-caps text-secondary uppercase mb-4">Core Transformation</p>
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Cotton Seed Oil Transformation</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Our state-of-the-art refinery transforms raw cotton seeds into premium-grade cooking oil and industrial feedstocks. Utilizing multi-stage filtration and cold-press optimization, we ensure the highest nutritional retention and chemical purity.
+                    </p>
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 border border-outline-variant bg-surface-container-low">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-3">oil_barrel</span>
+                            <h4 class="font-bold text-primary mb-2">Premium Grade</h4>
+                            <p class="text-sm text-on-surface-variant">Refined for heart-healthy consumer consumption.</p>
+                        </div>
+                        <div class="p-6 border border-outline-variant bg-surface-container-low">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-3">factory</span>
+                            <h4 class="font-bold text-primary mb-2">Industrial Use</h4>
+                            <p class="text-sm text-on-surface-variant">High-purity lubricants and chemical bases.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 reveal-up" style="transition-delay: 200ms;">
+                    <div class="relative rounded-xl overflow-hidden border border-outline-variant shadow-lg">
+                        <img alt="Premium Cotton Seed Oil" class="w-full h-[500px] object-cover" data-alt="Close-up professional studio shot of clear, golden-yellow premium cotton seed oil being poured into a sleek glass vessel. The lighting is sophisticated and bright, highlighting the purity and viscosity of the oil. The background is a clean, minimalist white industrial lab setting, emphasizing quality control and refined production standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChFbS88GcIKNNCLW62TryAHLoYRSkXln3qK3iRA-24yr1zBxDXCwAosHcIm2gGGGlPlzBZ_PZIhk-yj__r4IQzxGLSr4nRrCCxHotnwxP3chbxVeuMr4iyeRIp4lw8VSwVr90pl0rv32G9l1_fJ9JVrzPhSnbF1GkzVID9VVtCEFEb1lGnI59mnPThRCrQHVgox4IjnHLUk46jIFrPxk5eYC4wiPSgxNfU57RW3aNqDBVLWzJVxX951bP2FfXgCtLJmm8KyWCLXzU"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infographic Section -->
+            <div class="bg-surface-container p-12 reveal-up">
+                <h3 class="font-headline-md text-headline-md text-center text-primary mb-12">The Transformation Lifecycle</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                    <!-- Connector Lines (Desktop Only) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+                    <div class="relative z-10 flex flex-col items-center text-center bg-surface-container p-4">
+                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined">eco</span>
+                        </div>
+                        <h5 class="font-bold text-primary mb-2">Harvesting</h5>
+                        <p class="text-sm">Raw seed collection from GDIZ partner growers.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center bg-surface-container p-4">
+                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined">precision_manufacturing</span>
+                        </div>
+                        <h5 class="font-bold text-primary mb-2">Extraction</h5>
+                        <p class="text-sm">Mechanical pressing at controlled temperatures.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center bg-surface-container p-4">
+                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined">science</span>
+                        </div>
+                        <h5 class="font-bold text-primary mb-2">Refining</h5>
+                        <p class="text-sm">Filtration and neutralization for maximum purity.</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center bg-surface-container p-4">
+                        <div class="w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined">inventory_2</span>
+                        </div>
+                        <h5 class="font-bold text-primary mb-2">Packaging</h5>
+                        <p class="text-sm">Export-grade bottling and bulk logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section 2: Ginning -->
+        <section class="py-24 bg-surface-container-high">
+            <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row-reverse gap-gutter items-center">
+                    <div class="w-full md:w-1/2 reveal-up">
+                        <p class="font-label-caps text-label-caps text-secondary uppercase mb-4">Technical Services</p>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Advanced Cotton Ginning</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Our ginning facility employs the latest saw-gin technology to separate fibers from seeds with surgical precision. We maintain the integrity of the lint length and strength, delivering a superior product for global textile manufacturers.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                <span class="text-body-md">High-capacity processing: Up to 150 metric tons daily.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                <span class="text-body-md">Advanced moisture control for fiber preservation.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                <span class="text-body-md">Automated trash removal and grading systems.</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="border-2 border-secondary text-secondary font-bold px-8 py-3 hover:bg-secondary hover:text-white transition-all inline-block">Download Tech Specs</a>
+                    </div>
+                    <div class="w-full md:w-1/2 reveal-up" style="transition-delay: 200ms;">
+                        <img alt="Cotton Ginning Machinery" class="w-full h-[500px] object-cover rounded-xl shadow-xl" data-alt="Interior of a massive, modern cotton ginning factory. High-precision industrial machinery in shades of steel and green are operating in a well-lit, organized space. White cotton fibers are seen being processed through mechanical rollers. The environment is impeccably clean, representing the marriage of heavy industry and meticulous quality control." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyowJT4LUHkUmRyxYx6ZQiuZrK4MZzDdbisI9ILvFAC7x8B9KHB4TxUQOgLLO4iqUexQuVU_fgMo4kkIYTZHRbP0ZVSGSAearVdy_EYOZolhCvXwn2Pf7QhlT1N30bZ3XngBrjeDVmICGafYrHUePaPIrhXqV0IQ3Mw813X8l_nkvEZ6bPmcldueB2V17Lg-D_d6DBD-ztgZ8-4KI6_4jcqHaolidElZWtnrcIDgWq7lEv_mwKnmWhZu2SF2UDSVqNXd-54EYg2CM"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications & Certifications -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Standards of Excellence</h2>
+                <p class="text-on-surface-variant max-w-2xl mx-auto">Our facilities operate under the strictest international guidelines to ensure safety, reliability, and superior output.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
+                <!-- Card 1 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-all group">
+                    <div class="mb-6 w-12 h-12 bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Certifications</h4>
+                    <p class="text-body-md text-on-surface-variant mb-6">Fully compliant with ISO 9001:2015 and HACCP standards for food safety and industrial management.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface-container px-3 py-1 text-xs font-bold uppercase tracking-wider">ISO 9001</span>
+                        <span class="bg-surface-container px-3 py-1 text-xs font-bold uppercase tracking-wider">HACCP</span>
+                        <span class="bg-surface-container px-3 py-1 text-xs font-bold uppercase tracking-wider">FairTrade</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-all group">
+                    <div class="mb-6 w-12 h-12 bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">query_stats</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Quality Control</h4>
+                    <p class="text-body-md text-on-surface-variant mb-6">In-house laboratory testing for every batch. We monitor FFA levels, colorimetric value, and fiber tensile strength.</p>
+                    <ul class="text-sm space-y-2 text-on-surface-variant">
+                        <li class="flex justify-between"><span>Moisture Content:</span> <span class="font-bold">Max 10%</span></li>
+                        <li class="flex justify-between"><span>Impurity Level:</span> <span class="font-bold">Min 0.1%</span></li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 border border-outline-variant hover:border-primary transition-all group">
+                    <div class="mb-6 w-12 h-12 bg-primary/5 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">hub</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-primary mb-4">Capacity</h4>
+                    <p class="text-body-md text-on-surface-variant mb-6">Strategically located within the GDIZ economic zone, allowing for rapid export logistics and massive storage.</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-3xl font-extrabold text-primary">50,000+</span>
+                        <span class="text-sm font-bold text-on-surface-variant">Metric Tons / Year</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-primary py-20 px-margin-mobile relative overflow-hidden">
+            <div class="max-w-max-width mx-auto text-center relative z-10">
+                <h2 class="font-display-lg-mobile md:text-headline-lg text-white mb-8">Ready to Scale Your Supply Chain?</h2>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-secondary text-white font-bold px-10 py-4 hover:bg-secondary-fixed transition-all inline-block">Request a Quote</a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white text-white font-bold px-10 py-4 hover:bg-white hover:text-primary transition-all inline-block">Speak to an Expert</a>
+                </div>
+            </div>
+            <!-- Decorative circle -->
+            <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary-container rounded-full opacity-50"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-max-width mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-md text-headline-md text-on-primary mb-6">Krishi Agri Benin</div>
+                <p class="text-on-primary/60 font-body-md mb-8">Empowering West African agriculture through innovation and industrial scale.</p>
+                <div class="flex gap-4">
+                    <a href="index.html" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">public</a>
+                    <a href="mailto:contact@krishiagribenin.com" class="material-symbols-outlined text-on-primary/80 hover:text-secondary-fixed cursor-pointer">mail</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">QUICK LINKS</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="about.html">About Us</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="products.html">Products &amp; Services</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">RESOURCES</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="sustainability.html">Sustainability Report</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-caps text-label-caps text-secondary-fixed mb-6">CONTACT</h4>
+                <address class="not-italic text-on-primary/80 space-y-4 font-body-md">
+                    <p>Glo-Djigbé Industrial Zone (GDIZ)<br/>Abomey-Calavi, Benin</p>
+                    <p>contact@krishiagribenin.com</p>
+                    <p>+229 00 00 00 00</p>
+                </address>
+            </div>
+        </div>
+        <div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-8 max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-on-primary/60 text-sm">
+            <div>© 2024 Krishi Agri Benin. All rights reserved. Located at GDIZ, Benin.</div>
+            <div class="flex gap-8">
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function openMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0', 'is-open');
+                mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                mobileOverlay.classList.add('opacity-100');
+                document.body.classList.add('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.add('is-open'); menuBtn.setAttribute('aria-expanded','true'); }
+            }
+        }
+        function closeMenu() {
+            if (mobileMenu && mobileOverlay) {
+                mobileMenu.classList.remove('translate-x-0', 'is-open');
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.remove('opacity-100');
+                mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+                if (menuBtn) { menuBtn.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded','false'); }
+            }
+        }
+        if (menuBtn) menuBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+        if (mobileMenu) { mobileMenu.querySelectorAll('nav a').forEach(l => l.addEventListener('click', closeMenu)); }
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Simple parallax effect for hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('section img');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
